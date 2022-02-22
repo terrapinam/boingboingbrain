@@ -1,9 +1,8 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
-int main()
-{
-	int A, B;
-	cin >> A >> B;
-	cout << A + B;
+int main() {
+	int a[2] = {};
+	scanf_s("%d %d", a, a + 1);
+	printf("%d", a[0] + a[1]);
+	return 0;
 }
