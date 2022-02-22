@@ -1,8 +1,9 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int main() {
-		printf("\\    /\\\n");
-		printf(" )  ( ')\n");
-		printf("(  /  )\n");
-		printf(" \\(__)|\n");
+int main()
+{
+	int A, B;
+	cin >> A >> B;
+	cout << A + B;
 }
