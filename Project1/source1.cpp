@@ -1,10 +1,12 @@
 #include <stdio.h>
-//#include <iostream>
-//using namespace std;
+#include <iostream>
 
 int main()
 {
-	double A, B;
-	scanf_s("%lf %lf", &A, &B);
-	printf("%0.32f", A/B);
+	using std::cin;
+	using std::cout;
+	int yearb, years;
+	cin >> yearb;
+	years = yearb - 543;
+	cout << years;
 }
