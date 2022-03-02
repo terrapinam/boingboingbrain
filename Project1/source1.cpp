@@ -1,34 +1,29 @@
 #include <iostream>
 #include <stdio.h>
-//#include <cmath>
-//#include <cstring>
-//#include <string>
 
 int main() {
 	using std::cin;
 	using std::cout;
 	using std::endl;
-	int num;
-	cin >> num;
-	if (0 <= num && num <= 100)
-		switch (num / 10)
-		{
-		case 10:
-		case 9:
-			cout << 'A';
-			break;
-		case 8:
-			cout << 'B';
-			break;
-		case 7:
-			cout << 'C';
-			break;
-		case 6:
-			cout << 'D';
-			break;
-		default:
-			cout << 'F';
-			break;
+	//윤년은 연도가 '4의 배수이면서, 100의 배수가 아닐 때' 또는 '400의 배수일 때'이다
+	int year;
+	bool result;
+	cin >> year;
+	if (year%400 == 0) {
+		result = true;
+	}	else
+	{
+		if (year % 100 == 0) {
+			result = false;
 		}
+		else if (year % 4 == 0) {
+			result = true;
+		}
+		else
+		{
+			result = false;
+		}
+	}
+	cout << result;
 	return 0;
 }
