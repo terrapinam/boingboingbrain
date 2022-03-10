@@ -1,23 +1,17 @@
 #include <iostream>
 
 int main() {
-    int x, y;
-    std::cin >> x >> y;
-    if (x > 0) {
-        if (y > 0) {
-            std::cout << 1;
-        }
-        else {
-            std::cout << 4;
-        }
-    }
-    else {
-        if (y > 0) {
-            std::cout << 2;
-        }
-        else {
-            std::cout << 3;
-        }
-    }
+    int h, m;
+    std::cin >> h >> m ;
+    m += 15;
+    if (m >= 60)
+        m -= 60;
+    else
+        h -= 1;
+    if (h >= 24)
+        h -= 24;
+    if (h < 0)
+        h += 24;
+    std::cout << h << " " << m;
     return 0;
 }
