@@ -1,13 +1,20 @@
 #include <iostream>
 
-//OMG I haven't solved for too long
-
 int main() {
-	int N;
-	std::cin >> N;
-	for (int i = 1; i <= 9; i++)
+	int T;
+	std::cin >> T;
+	int* A = new int[T];
+	int* B = new int[T];
+	
+	for (int i = 0; i < T; i++)
 	{
-		std::cout << N << " * " << i << " = " << (N * i)<<std::endl;
+		std::cin >> A[i] >> B[i];
 	}
+
+	for (int i = 0; i < T; i++)
+	{
+		std::cout << A[i] + B[i] << std::endl;
+	}
+	
 	return 0;
 }
